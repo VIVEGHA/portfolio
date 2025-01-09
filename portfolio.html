@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-image: url('https://wallpaperaccess.com/full/741514.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #363438;
+            width: 100%;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .navbar ul li a:hover {
+            color: #ffba08;
+        }
+
+        /* Container Styling */
+        .container {
+            display: flex;
+            margin-top: 70px; /* Offset for fixed navbar */
+            width: 80%;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+        }
+
+        .photo {
+            background-image: url('C:/Users/vikas/OneDrive/Pictures/Screenshots/Screenshot 2025-01-06 140520.png');
+            background-size: cover;
+            background-position: center;
+            width: 40%;
+            height: 100%;
+        }
+        .about-me {
+            width: 60%;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin-left: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .about-me h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-me p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .about-me:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
+        section {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #005f73;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #005f73;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Skills list styling */
+        ul.skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.skills-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        ul.skills-list li img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        /* Project Cards Styling */
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            padding: 20px 0;
+        }
+
+        .project-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            width: 90%;
+            max-width: 300px;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #363438; 
+            color: rgb(244, 241, 241);
+            padding: 10px 0;
+            border-top: 1px solid black;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            margin: 0 5px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about-me">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="photo"></div>
+        <div class="about-me">
+            <h1>ABOUT ME</h1>
+            <p>
+                I am a passionate web developer and designer, with a deep enthusiasm for creating visually appealing and highly functional websites. With a focus on delivering seamless user experiences, I specialize in designing and developing intuitive interfaces that not only look great but also perform efficiently. I enjoy working with the latest technologies, from front-end frameworks like HTML5, CSS3, and JavaScript to back-end tools such as Node.js, Python, and databases.
+            </p>
+        </div>
+    </div>
+
+    <section id="skills" class="section">
+        <h2>My Skills</h2>
+        <ul class="skills-list">
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/128/6132/6132222.png" alt="C Logo"> C
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/128/6132/6132222.png" alt="C++ Logo"> C++
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/128/1822/1822920.png" alt="Python Logo"> Python
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png" alt="Java Logo"> Java
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/128/4299/4299956.png" alt="SQL Logo"> SQL
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/128/2906/2906206.png" alt="MongoDB Logo"> MongoDB
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="https://th.bing.com/th/id/OIP._J_B_blxHO6qW-7tcjEj7AHaDz?w=286&h=179&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Event Financial Management System">
+                <h3>Event Financial Management System</h3>
+                <p>A Java-based system to manage budgets and generate reports.</p>
+            </div>
+            <div class="project-card">
+                <img src="https://th.bing.com/th/id/OIP.CkJXA_HrhzVw_bL13vU3awHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Online Auction System">
+                <h3>Online Auction System</h3>
+                <p>An AI-driven recommendation engine for Online Auction.</p>
+            </div>
+            <div class="project-card">
+                <img src="https://th.bing.com/th/id/OIP.vqWjSUThgkt5fNTHGP7qHAHaDW?w=325&h=158&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Food Delivery Application">
+                <h3>Food Delivery Application</h3>
+                <p>A Java console app for managing food orders and real-time tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+            <a href="mailto:vivegha123@gmail.com">Email</a>
+        </div>
+        <p>&copy; 2025 Vivegha. All rights reserved.</p>
+    </footer>
+</body>
+</html>
