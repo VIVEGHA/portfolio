@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("C:/Users/vikas/OneDrive/Pictures/Desktop/backround.png"); 
+            background-position: center;
+            background-attachment: fixed; 
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        
+
+       
+        .transition {
+           
+            animation: fadeIn 10s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px 0;
+            background: linear-gradient(to right, #004d80, #00e676);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e676;
+        }
+    
+       
+        section {
+            margin: 70px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+            background: linear-gradient(to right, #004d80, #00e676);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: boxHover 3s infinite alternate;
+        }
+
+        @keyframes boxHover {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            }
+            100% {
+                transform: scale(1.02);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+
+        .about-me-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+.photo {
+    background-image: url('C:/Users/vikas/OneDrive/Pictures/Screenshots/Screenshot 2025-01-06 140520.png');
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+}
+
+.about-me h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: gradientText 3s linear infinite alternate;
+}
+
+.about-me p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+
+        ul.skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            gap: 15px;
+            padding: 0;
+        }
+
+        ul.skills-list li {
+            background: linear-gradient(to right, #004d80, #00e676);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        ul.skills-list li:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        ul.skills-list li img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+       
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: linear-gradient(to bottom, #004d80, #00e676);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+       
+        .certificates-list {
+            list-style: none;
+            padding: 0;
+            color: #fff;
+        }
+
+        .certificates-list li {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+       
+        #contact {
+            background: linear-gradient(to bottom, #004d80, #00e676);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #contact ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #contact li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        #contact li a:hover {
+            color: #00e676;
+        }
+    </style>
+</head>
+<body>
+   
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates-list">Certificates</a>
+      <a href="#contact">Contact</a>
+  </nav>
+  
+    <div id="home" class="page transition">
+      <section id="home" class="page transition">
+        <div class="about-me-container">
+            <div class="photo"></div>
+            <div class="about-me">
+                <h1>VIVEGHA</h1>
+                <p>
+                    I am a passionate web developer and designer, with a deep enthusiasm for creating visually appealing and highly functional websites. With a focus on delivering seamless user experiences, I specialize in designing and developing intuitive interfaces that not only look great but also perform efficiently. I enjoy working with the latest technologies, from front-end frameworks like HTML5, CSS3, and JavaScript to back-end tools such as Node.js, Python, and databases.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    
+  </div>
+
+
+  <div id="skills" class="page transition">
+      <section>
+          <h2>My Skills</h2>
+          <ul class="skills-list">
+              <li>
+                  <img src="https://www.pngitem.com/pimgs/m/31-312155_c-programming-language-logo-hd-png-download.png" alt="C Logo"> C
+              </li>
+              <li>
+                  <img src="https://cdn-icons-png.flaticon.com/128/6132/6132222.png" alt="C++ Logo"> C++
+              </li>
+              <li>
+                  <img src="https://cdn-icons-png.flaticon.com/128/1822/1822920.png" alt="Python Logo"> Python
+              </li>
+              <li>
+                  <img src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png" alt="Java Logo"> Java
+              </li>
+              <li>
+                  <img src="https://cdn-icons-png.flaticon.com/128/4299/4299956.png" alt="SQL Logo"> SQL
+              </li>
+              <li>
+                  <img src="https://cdn-icons-png.flaticon.com/128/2906/2906206.png" alt="MongoDB Logo"> MongoDB
+              </li>
+          </ul>
+      </section>
+  </div>
+
+
+  <div id="projects" class="page transition">
+      <section>
+          <h2>Projects</h2>
+          <div class="project-container">
+              <div class="project-card">
+                  <img src="https://th.bing.com/th/id/OIP._J_B_blxHO6qW-7tcjEj7AHaDz?w=286&h=179&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Event Financial Management System">
+                  <h3>Event Financial Management System</h3>
+                  <p>A Java-based system to manage budgets and generate reports.</p>
+              </div>
+              <div class="project-card">
+                  <img src="https://th.bing.com/th/id/OIP.CkJXA_HrhzVw_bL13vU3awHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Online Auction System">
+                  <h3>Online Auction System</h3>
+                  <p>An AI-driven recommendation engine for Online Auction.</p>
+              </div>
+              <div class="project-card">
+                  <img src="https://th.bing.com/th/id/OIP.vqWjSUThgkt5fNTHGP7qHAHaDW?w=325&h=158&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Food Delivery Application">
+                  <h3>Food Delivery Application</h3>
+                  <p>A Java console app for managing food orders and real-time tracking.</p>
+              </div>
+          </div>
+      </section>
+  </div>
+
+  
+  <div >
+      <section>
+          <h2>Certificates</h2>
+          <ul class="certificates-list">
+              <li>
+                  <h3>Web Development Certificate</h3>
+                  <p>Certificate from XYZ Academy in Full Stack Web Development.</p>
+              </li>
+              <li>
+                  <h3>Python for Data Science</h3>
+                  <p>Certification in Python and Data Science from ABC University.</p>
+              </li>
+              <li>
+                  <h3>Machine Learning Fundamentals</h3>
+                  <p>Completed course on Machine Learning basics from DEF Institute.</p>
+              </li>
+          </ul>
+      </section>
+  </div>
+
+ 
+  <div id="contact" class="page transition">
+      <section>
+          <h2>Contact</h2>
+          <p>If you want to get in touch, feel free to email me at:</p>
+          <p><a href="mailto:vivegha@example.com">vivegha@example.com</a></p>
+          <p>You can also find me on:</p>
+          <ul>
+              <li><a href="https://www.linkedin.com/in/vivegha">LinkedIn</a></li>
+              <li><a href="https://github.com/vivegha">GitHub</a></li>
+          </ul>
+      </section>
+  </div>
+</body>
+</html>
